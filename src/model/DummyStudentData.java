@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class DummyData {
+public class DummyStudentData {
 
     private static String[] names = {"BUSRA", "NESLIHAN", "EZGI", "DURU", "SIMGE", "PINAR", "DERIN"};
     private static String[] courses = {"JAVA", "PYTHON", "C#"};
@@ -19,27 +19,16 @@ public class DummyData {
         return students;
     }
 
-    public List<LPAStudent> createLPAStudents(int numberStudent){
-        List<LPAStudent> lpaStudents = new ArrayList<>();
-        for (int i=0; i<numberStudent; i++){
-            lpaStudents.add(new LPAStudent(randomName(),randomCourse(),randomYear(),randomProcess()));
-        }
-        return lpaStudents;
-    }
 
-
-    private String randomName(){
+    protected String randomName(){
         return names[random.nextInt(names.length)];
     }
 
-    private String randomCourse(){
+    protected String randomCourse(){
         return courses[random.nextInt(courses.length)];
     }
-    private int randomYear(){
+    protected int randomYear(){
         return random.nextInt(2019, 2025);
     }
 
-    private double randomProcess(){
-        return random.nextDouble(0.00, 100.01);
-    }
 }

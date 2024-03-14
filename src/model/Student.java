@@ -16,7 +16,8 @@ public class Student {
 
 
     public boolean isMatched(String fieldName, String value){
-        return switch (fieldName){
+        String fName = fieldName.toUpperCase();
+        return switch (fName){
             case "NAME" -> name.equalsIgnoreCase(value);
             case "COURSE NAME" -> courseName.equalsIgnoreCase(value);
             case "STARTED YEAR" -> yearStarted == Integer.parseInt(value);
