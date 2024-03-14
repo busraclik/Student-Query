@@ -2,7 +2,7 @@ package model;
 
 import java.util.Comparator;
 
-public class LPAStudent extends Student {
+public class LPAStudent extends Student implements Comparable<LPAStudent>{
 
     private double percenteComplete;
 
@@ -28,5 +28,10 @@ public class LPAStudent extends Student {
 
     public double getPercenteComplete() {
         return percenteComplete;
+    }
+
+    @Override
+    public int compareTo(LPAStudent lpaStudent) {
+        return 0;
     }
 }
