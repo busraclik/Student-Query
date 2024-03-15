@@ -31,5 +31,7 @@ public class Student {
         return "%d %-15s %-15s %d".formatted(studentId,name,courseName,yearStarted);
     }
 
-
+    public int getYearStarted() {
+        return yearStarted;
+    }
 }

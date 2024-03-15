@@ -13,6 +13,9 @@ public class Main {
         var studentList = studentDummy.createStudents(15);
         System.out.println("Student List");
         printList(studentList);
+        //System.out.println("SORTED LIST AS A YEAR");
+        //studentList.sort(new StudentComparator());
+        //printList(studentList);
 
 
         QueryList<Student> studentQueryList = new QueryList<>(studentList);
@@ -27,7 +30,8 @@ public class Main {
         DummyLPAStudentData dummyLPAStudentData = new DummyLPAStudentData();
         var lpaStudentList = dummyLPAStudentData.createLPAStudents(15);
         System.out.println("Lpa Student List");
-        lpaStudentList.sort(new LPAStudentComparator());
+        //sort list
+        //lpaStudentList.sort(new LPAStudentComparator());
         //Collections.sort(lpaStudentList);
         printList(lpaStudentList);
 
